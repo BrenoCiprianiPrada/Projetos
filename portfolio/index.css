@@ -306,10 +306,6 @@ footer ul{
 
 /* MEDIA QUERRY */
 @media (max-width: 1300px) {
-    div.divdasdivs3{
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
     #secao3 h1{
         font-size: 9rem;
     }
@@ -322,9 +318,7 @@ footer ul{
     .caixinhadois::before{
         display: none;
     }
-    div.divdasdivs3{
-        grid-template-columns: 1fr;
-    }
+
     footer{
         display: flex;
         flex-direction: column;
@@ -412,11 +406,6 @@ footer ul{
     div.limitesecao3{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-    }
-    div.divdasdivs3{
-        grid-template-columns: 1fr;
-        gap: 1rem;
         justify-content: center;
     }
     div.divsecao3{
