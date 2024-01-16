@@ -1,0 +1,211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    background-color: #fff2e2;
+}
+header{
+    margin-bottom: 2.5rem;
+}
+.maior{
+    font-size: 130%;
+}
+body > *{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+nav{
+    margin-top: 3rem;
+    margin-left: 33%;
+    background-color: rgb(144, 248, 118);
+    padding: 1.3rem;
+    display: flex;
+    gap: 1rem;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 15px 10px;
+}
+.titulo{
+    margin-left: 27%;
+}
+.titulo h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 5.5rem;
+    width: 7ch;
+    font-weight: lighter;
+}
+article{
+    margin-top: 2rem;
+    margin-left: 25%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+article > section{
+    grid-column: 2;
+}
+
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.jsScroll{
+    opacity: 0;
+    transform: translate3d(-30px,0,0);
+    transition: 0.5s;
+}
+.jsScroll.ativo{
+    opacity: 1;
+    transform: translate3d(0, 0,0);
+    transition: 0.5s;
+}
+
+.imagens{
+    width: 100%;
+    grid-column: 1;
+    overflow-y: scroll;
+    height: 400px;
+}
+.imagens:hover{
+    cursor: pointer;
+}
+.imagens::-webkit-scrollbar{
+    width: 18px;
+}
+.imagens::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 177, 19);
+    border-left: 4px solid #fff2e2;
+    border-right: 4px solid #fff2e2;
+}
+html::-webkit-scrollbar{
+    width: 18px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 177, 19);
+    border-left: 4px solid #fff2e2;
+    border-right: 4px solid #fff2e2;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+h2{
+    color: rgb(51, 177, 19);
+    padding-bottom: 1rem;
+}
+.displayNone{
+    display: none;
+}
+.jsDescription section{
+    transition: 0.5s;
+}
+.jsDescription section p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.faq{
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.faq p{
+    margin-top: -0.7rem;
+    margin-bottom: 0.5rem;
+    animation: show .5s forwards;
+}
+.faq h2{
+    position: relative;
+}
+.faq h2:hover{
+    cursor: pointer;
+}
+.faq h2::before{
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -35px;
+    width: 25px;
+    height: 10px;
+    background-color: rgb(51, 177, 19);
+}
+.faq h2::after{
+    content: url(imagens/arrow-narrow-down-svgrepo-com\ \(2\).svg);
+    margin-left: 1rem;
+    transition: transform 0.3s;
+}
+.viraSeta{
+    rotate: 90deg;
+    transition: 0.3s;
+}
+section > h2{
+    position: relative;
+    margin-left: 50px;
+}
+section > h2::before{
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -50px;
+    width: 40px;
+    height: 10px;
+    background-color: rgb(51, 177, 19);
+}
+.contato{
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    gap: 2rem;
+}
+.contato > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.contato li{
+    list-style: none;
+    position: relative;
+    margin-left: 20px;
+}
+.contato li::before{
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -35px;
+    width: 25px;
+    height: 10px;
+    background-color: rgb(51, 177, 19);
+}
+footer{
+    margin-top: 3rem;
+    margin-left: 25%;
+    background-color: rgb(144, 248, 118);
+    padding: 1.3rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}

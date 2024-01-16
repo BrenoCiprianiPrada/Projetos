@@ -1,0 +1,100 @@
+/* VANTAGENS */
+.vantagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+.containerpai{
+    padding: 7rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.vantagens h2{
+    font-size: 4rem;
+    grid-column: 1/-1;
+}
+.vantagens h3{
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+.vantagens div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+.vantagens div::before{
+    content: "\1F30A";
+    top: -3rem;
+    left: -5px;
+    font-size: 2rem;
+    position: absolute;
+}
+.vantagens p{
+    color: #b2b2b2;
+}
+/*  */
+/* PERGUNTAS FREQUENTES */
+.perguntas{
+display: flex;
+flex-direction: column;
+}
+.perguntas li{
+padding: 2rem;
+}
+.perguntas li:nth-child(2n){
+    background-color: #f7f7f7;
+}
+.perguntas li h3{
+    color: black;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+.perguntas li h3::before{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 8px;
+    background-color: #00ff73;
+    top: 6px;
+    left: -1.3rem;
+}
+.perguntas p{
+    color: #404040;
+    max-width: 70ch;
+    line-height: 1.6rem;
+}
+.perguntas li div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.perguntas li div span{
+    content: url(imagens/up-arrow-svgrepo-com.svg);
+    max-width: 15px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.perguntas li div span:hover{
+    cursor: pointer;
+    rotate: 180deg;
+    transition: 0.3s;
+}
+/*  */
+/* MEDIA QUERRYS */
+@media (max-width:1000px){
+    .vantagens{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:600px){
+    .vantagens{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:400px){
+    .vantagens h2{
+        font-size: 3rem;
+    }
+}
+/*  */
